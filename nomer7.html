@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan dan Minuman</title>
+</head>
+<body>
+
+<script>
+    var harga_makanan = 10000;
+    var harga_minuman = 5000;
+
+    var jumlah_makanan = prompt("Masukkan jumlah makanan yang ingin dipesan:");
+    var jumlah_minuman = prompt("Masukkan jumlah minuman yang ingin dipesan:");
+
+    var total_harga_makanan = harga_makanan * jumlah_makanan;
+    var total_harga_minuman = harga_minuman * jumlah_minuman;
+    
+    var total_harga = total_harga_makanan + total_harga_minuman;
+
+    console.log("Detail Pesanan:");
+    console.log("Jumlah Makanan: " + jumlah_makanan);
+    console.log("Total Harga Makanan: Rp " + total_harga_makanan);
+    console.log("Jumlah Minuman: " + jumlah_minuman);
+    console.log("Total Harga Minuman: Rp " + total_harga_minuman);
+    console.log("------------------------");
+    console.log("Total Harga Keseluruhan: Rp " + total_harga);
+</script>
+
+</body>
+</html>

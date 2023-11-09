@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="tahun">Masukkan Tahun</label>
+    <input type="text" name="tahun" id="tahun">
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("tahun").addEventListener("input", function() {
+            var tahun = document.getElementById("tahun").value;
+            var resultElement = document.getElementById("result");
+
+            if (tahun % 4 === 0) {
+                resultElement.textContent = tahun + " Tahun ini merupakan tahun kabisat";
+            } else {
+                resultElement.textContent = "Tahun ini bukan tahun kabisat";
+            }
+        });
+    </script>
+</body>
+</html>

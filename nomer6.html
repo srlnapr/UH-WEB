@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="umur">Masukkan Kategori Usia</label>
+    <input type="text" name="umur" id="umur">
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("umur").addEventListener("input", function() {
+            var umur = document.getElementById("umur").value.toLowerCase(); 
+            var resultElement = document.getElementById("result");
+
+            if (umur === "balita") { 
+                resultElement.textContent = umur + " Tidak boleh masuk bioskop";
+            } 
+            else {
+                resultElement.textContent = umur + " Boleh Masuk Bioskop";
+            }
+        });
+    </script>
+</body>
+</html>

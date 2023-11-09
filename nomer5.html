@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+    <style>
+        .centered {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 1px solid black;">
+        <h1 align="center">Latihan Formulir</h1>
+        <form id="myForm" style="padding: 15px;" onsubmit="return validateForm()">
+            <fieldset>
+                <legend align="center">Input Data</legend>
+                <table>
+                    <tr>
+                        <td><label for="nama">Nama</label></td>
+                        <td style="padding: 5px;"><span>:</span></td>
+                        <td style="padding: 5px;"><input type="text" name="nama" id="nama" placeholder="Masukan Nama Lengkap" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="NIK">NIK</label></td>
+                        <td style="padding: 5px;"><span>:</span></td>
+                        <td style="padding: 5px;"><input type="NIK" name="NIK" id="NIK" placeholder="Masukan NIK Anda" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Email">Email</label></td>
+                        <td style="padding: 5px;"><span>:</span></td>
+                        <td style="padding: 5px;"><input type="email" name="email" id="email" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nomer_telepon">Nomer Telepon</label></td>
+                        <td style="padding: 5px;"><span>:</span></td>
+                        <td style="padding: 5px;"><input type="text" name="nomer_telepon" id="nomer_telepon"  placeholder="Masukan Nomer Telepon" title="Masukkan nomor telepon dengan angka saja" /></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="10"></td>
+                        <td><input type="submit" name="submit" value="submit"></td>
+                        <td><input type="reset" name="reset" value="Reset"></td> 
+                    </tr>
+
+                </table>
+            </fieldset>
+        </form>
+        <br>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+    
+            var nama = document.getElementById("nama").value;
+            var NIK = document.getElementById("NIK").value;
+            var email = document.getElementById("email").value;
+            var nomer_telepon = document.getElementById("nomer_telepon").value;
+    
+            if (nama === "" || NIK === "" || email === "" || nomer_telepon === "") {
+                alert("Anda harus mengisi data dengan lengkap!");
+            } else {
+                alert("Terimakasih sudah melakukan pendaftaran!");
+              
+            }
+        });
+    </script>
+    
+</body>
+</html>

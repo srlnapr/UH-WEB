@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="harga">Masukkan Harga Barang</label>
+    <input type="text" name="harga" id="harga">
+    <label for="uang">Masukkan Uang Yang Dibayar</label>
+    <input type="text" name="uang" id="uang">
+    <button onclick="hitunguang()">Hitung</button>
+    <p id="hasil"></p>
+
+    <script>
+        function hitunguang() {
+            var harga = parseFloat(document.getElementById("harga").value) || 0;
+            var uang = parseFloat(document.getElementById("uang").value) || 0;
+            var kembalian = uang - harga;
+
+            document.getElementById("hasil").textContent = "Total kembalian: " + kembalian;
+        }
+    </script>
+</body>
+</html>

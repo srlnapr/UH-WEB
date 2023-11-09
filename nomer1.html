@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Nomer 1</title>
+    <style>
+        #persegi {
+            width: 100px;
+            align-items: center;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="persegi"></div>
+    <button onclick="ubahwarna()">Ubah Warna</button>
+
+    <script>
+        function ubahwarna() {
+            var persegi = document.getElementById('persegi');
+            persegi.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+</html>

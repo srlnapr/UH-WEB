@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="sisi_a">Panjang sisi A</label>
+    <input type="text" name="sisi_a" id="sisi_a">
+    <label for="sisi_b">Panjang sisi B</label>
+    <input type="text" name="sisi_b" id="sisi_b">
+    <label for="sisi_c">Panjang sisi C</label>
+    <input type="text" name="sisi_c" id="sisi_c">
+    <label for="sisi_d">Panjang sisi D</label>
+    <input type="text" name="sisi_d" id="sisi_d">
+
+    <button onclick="hitungSisi()">Hitung</button>
+    <p id="result"></p>
+
+    <script>
+        function hitungSisi() {
+            var sisiA = parseFloat(document.getElementById("sisi_a").value) || 0;
+            var sisiB = parseFloat(document.getElementById("sisi_b").value) || 0;
+            var sisiC = parseFloat(document.getElementById("sisi_c").value) || 0;
+            var sisiD = parseFloat(document.getElementById("sisi_d").value) || 0;
+
+            var totalSisi = sisiA + sisiB + sisiC + sisiD;
+
+            document.getElementById("result").textContent = "Total Panjang Keempat Sisi: " + totalSisi;
+        }
+    </script>
+</body>
+</html>
